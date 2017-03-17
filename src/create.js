@@ -1,9 +1,7 @@
 'use strict'
-const fs = require('fs')
-const path = require('path')
-const rimraf = require('rimraf')
-const shelljs = require('shelljs')
-const exists = require('./exists')
+
+const fs, path, rimraf, shelljs, exists; 
+[fs, path, rimraf, shelljs, exists] = [require('fs'), require('path'), require('rimraf'), require('shelljs'), require('./exists')]
 
 function cache (source, pkg) {
 	return new Promise((resolve, reject) => {
